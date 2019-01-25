@@ -10,7 +10,7 @@
     </parent>
     <groupId>org.dice_research.opal</groupId>
     <artifactId>common</artifactId>
-    <version>1.0.0.1</version>
+    <version>1.0.0.3</version>
     <name>common</name>
     <description>common modules in OPAL projects</description>
 

@@ -2,14 +2,13 @@ package org.dice_research.opal.common.vocabulary;
 
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
-import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 
 /**
  * Quality assessment for Linked Data (LDQD)
+ * @see <a href="https://www.w3.org/2016/05/ldqd">https://www.w3.org/2016/05/ldqd</a>
  *
  * @author Adrian Wilke
- * @see <a href="https://www.w3.org/2016/05/ldqd">https://www.w3.org/2016/05/ldqd</a>
  */
 public class Ldqd {
 
