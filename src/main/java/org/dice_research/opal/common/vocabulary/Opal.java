@@ -16,13 +16,18 @@ public class Opal {
 
 	// Namespaces
 
+	private static final String NS_OPAL_CATALOGS = "http://projekt-opal.de/catalog/";
 	private static final String NS_OPAL_DIMENSIONS = "http://dimension.projekt-opal.de/";
 	private static final String NS_OPAL_METRICS = "http://metric.projekt-opal.de/";
 
 	private static final Model m_model = ModelFactory.createDefaultModel();
 
-	public static final Resource NAMESPACE_OPAL_DIMENSIONS = m_model.createResource(NS_OPAL_DIMENSIONS);
-	public static final Resource NAMESPACE_OPAL_METRICS = m_model.createResource(NS_OPAL_METRICS);
+	// Fixed resource URIs
+
+	public static final Resource OPAL_CATALOG_MCLOUD = m_model.createResource(NS_OPAL_CATALOGS + "mcloud");
+	public static final Resource OPAL_CATALOG_GOVDATA = m_model.createResource(NS_OPAL_CATALOGS + "govdata");
+	public static final Resource OPAL_CATALOG_EUROPEANDATAPORTAL = m_model
+			.createResource(NS_OPAL_CATALOGS + "europeandataportal");
 
 	// --- Category: Intrinsic ---
 
@@ -47,6 +52,10 @@ public class Opal {
 
 	public static final Resource OPAL_DIMENSION_RIGHTS = m_model.createResource(NS_OPAL_DIMENSIONS + "Rights");
 	public static final Resource OPAL_METRIC_KNOWN_LICENSE = m_model.createResource(NS_OPAL_METRICS + "Known_license");
+
+	// Dimension: Interlinking
+
+	public static final Resource OPAL_METRIC_LINKED_DATA = m_model.createResource(NS_OPAL_METRICS + "Linked_data");
 
 	// --- Category: Representational ---
 
