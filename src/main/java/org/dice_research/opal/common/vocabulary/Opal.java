@@ -26,12 +26,16 @@ public class Opal {
 	public static final Resource OPAL_CATALOG_EUROPEANDATAPORTAL = MODEL
 			.createResource(NS_OPAL_CATALOGS + "europeandataportal");
 
+	// Final score (average value)
+
+	public static final Resource OPAL_METRIC_METADATA_QUALITY = MODEL
+			.createResource(NS_OPAL_METRICS + "MetadataQuality");
+
 	// Accessibility - Access
 
 	public static final Resource OPAL_DIMENSION_ACCESS = MODEL.createResource(NS_OPAL_DIMENSIONS + "Access");
 	public static final Resource OPAL_METRIC_OPEN_METADATA = MODEL.createResource(NS_OPAL_METRICS + "OpenMetadata");
-	public static final Resource OPAL_METRIC_RETRIEVABILITY = MODEL
-			.createResource(NS_OPAL_METRICS + "Retrievability");
+	public static final Resource OPAL_METRIC_RETRIEVABILITY = MODEL.createResource(NS_OPAL_METRICS + "Retrievability");
 
 	// Accessibility - Data
 
@@ -109,8 +113,7 @@ public class Opal {
 	public static final Resource OPAL_DIMENSION_UNDERSTANDABILITY = MODEL
 			.createResource(NS_OPAL_DIMENSIONS + "Understandability");
 	public static final Resource OPAL_METRIC_READABILITY = MODEL.createResource(NS_OPAL_METRICS + "Readability");
-	public static final Resource OPAL_METRIC_LANGUAGE_ERRORS = MODEL
-			.createResource(NS_OPAL_METRICS + "LanguageErrors");
+	public static final Resource OPAL_METRIC_LANGUAGE_ERRORS = MODEL.createResource(NS_OPAL_METRICS + "LanguageErrors");
 	public static final Resource OPAL_METRIC_EXAMPLE_APPLICATIONS = MODEL
 			.createResource(NS_OPAL_METRICS + "ExampleApplications");
 
@@ -119,8 +122,7 @@ public class Opal {
 
 	public static final Resource OPAL_DIMENSION_EXPRESSIVENES = MODEL
 			.createResource(NS_OPAL_DIMENSIONS + "Expressiveness");
-	public static final Resource OPAL_METRIC_CATEGORIZATION = MODEL
-			.createResource(NS_OPAL_METRICS + "Categorization");
+	public static final Resource OPAL_METRIC_CATEGORIZATION = MODEL.createResource(NS_OPAL_METRICS + "Categorization");
 	public static final Resource OPAL_METRIC_DESCRIPTION = MODEL.createResource(NS_OPAL_METRICS + "Description");
 	public static final Resource OPAL_METRIC_EXTEND = MODEL.createResource(NS_OPAL_METRICS + "Extend");
 
@@ -136,8 +138,7 @@ public class Opal {
 	public static final Resource OPAL_DIMENSION_REPRESENTATION = MODEL
 			.createResource(NS_OPAL_DIMENSIONS + "Representation");
 	public static final Resource OPAL_METRIC_OPEN_FORMAT = MODEL.createResource(NS_OPAL_METRICS + "OpenFormat");
-	public static final Resource OPAL_METRIC_METADATA_FORMAT = MODEL
-			.createResource(NS_OPAL_METRICS + "MetadataFormat");
+	public static final Resource OPAL_METRIC_METADATA_FORMAT = MODEL.createResource(NS_OPAL_METRICS + "MetadataFormat");
 	public static final Resource OPAL_METRIC_MACHINE_PROCESSABLE = MODEL
 			.createResource(NS_OPAL_METRICS + "MachineProcessable");
 	public static final Resource OPAL_METRIC_VOCABULARY = MODEL.createResource(NS_OPAL_METRICS + "Vocabulary");
@@ -148,8 +149,7 @@ public class Opal {
 
 	// Representational- Versatility
 
-	public static final Resource OPAL_DIMENSION_VERSATILITY = MODEL
-			.createResource(NS_OPAL_DIMENSIONS + "Versatility");
+	public static final Resource OPAL_DIMENSION_VERSATILITY = MODEL.createResource(NS_OPAL_DIMENSIONS + "Versatility");
 	public static final Resource OPAL_METRIC_MULTIPLE_SERIALIZATIONS = MODEL
 			.createResource(NS_OPAL_METRICS + "MultipleSerializations");
 	public static final Resource OPAL_METRIC_MULTIPLE_LANGUAGES = MODEL
