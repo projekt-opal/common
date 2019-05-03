@@ -5,15 +5,19 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
 
 /**
- * OPAL quality vocabulary.
+ * OPAL metadata quality vocabulary.
+ * 
+ * Also see: org.apache.jena.vocabulary.*
  * 
  * @author Adrian Wilke
  */
-public class Opal {
+public abstract class Opal {
 
 	// Namespaces
 
-	private static final String NS_OPAL_CATALOGS = "http://projekt-opal.de/catalog/";
+	public static final String NS_OPAL = "http://projekt-opal.de/";
+
+	private static final String NS_OPAL_CATALOGS = NS_OPAL + "catalog/";
 	private static final String NS_OPAL_DIMENSIONS = "http://dimension.projekt-opal.de/";
 	private static final String NS_OPAL_METRICS = "http://metric.projekt-opal.de/";
 

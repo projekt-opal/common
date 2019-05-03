@@ -5,7 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.dice_research.opal</groupId>
 	<artifactId>common</artifactId>
-	<version>1.0.1.2</version>
+
+	<!-- For minor updates increment the 3rd level -->
+	<version>1.0.2</version>
+
 	<name>common</name>
 	<description>Common modules in OPAL projects</description>
 	<properties>
