@@ -7,7 +7,7 @@
 	<artifactId>common</artifactId>
 
 	<!-- For minor updates increment the 3rd level -->
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 
 	<name>common</name>
 	<description>Common modules in OPAL projects</description>

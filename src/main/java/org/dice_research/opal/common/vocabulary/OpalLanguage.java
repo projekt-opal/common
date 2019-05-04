@@ -23,12 +23,11 @@ import org.dice_research.opal.common.constants.ISO_639_1;
 public abstract class OpalLanguage {
 
 	private static final Model MODEL = ModelFactory.createDefaultModel();
-	private static final String NS_OPAL_LANGUAGE = Opal.NS_OPAL + "language/";
 
 	public static final Property language = MODEL.createProperty(Opal.NS_OPAL + "language");
 
-	public static final Resource LANGUAGE_DE = MODEL.createResource(NS_OPAL_LANGUAGE + ISO_639_1.DE);
-	public static final Resource LANGUAGE_EN = MODEL.createResource(NS_OPAL_LANGUAGE + ISO_639_1.EN);
-	public static final Resource LANGUAGE_ES = MODEL.createResource(NS_OPAL_LANGUAGE + ISO_639_1.ES);
-	public static final Resource LANGUAGE_FR = MODEL.createResource(NS_OPAL_LANGUAGE + ISO_639_1.FR);
+	public static final Resource LANGUAGE_DE = MODEL.createResource(ISO_639_1.URI_DE.toString());
+	public static final Resource LANGUAGE_EN = MODEL.createResource(ISO_639_1.URI_EN.toString());
+	public static final Resource LANGUAGE_ES = MODEL.createResource(ISO_639_1.URI_ES.toString());
+	public static final Resource LANGUAGE_FR = MODEL.createResource(ISO_639_1.URI_FR.toString());
 }
