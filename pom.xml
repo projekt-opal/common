@@ -5,21 +5,35 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.dice_research.opal</groupId>
 	<artifactId>common</artifactId>
+	<name>common</name>
+	<description>Common utilities for OPAL components</description>
 
 	<!-- For minor updates increment the 3rd level -->
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 
-	<name>common</name>
-	<description>Common modules in OPAL projects</description>
+	<!-- Common Java version: Java 8 -->
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.apache.jena/jena-core -->
+
+		<!-- Jena ARQ -->
+		<!-- Includes jena-core -->
+		<!-- required e.g. for RDFDataMgr -->
+		<!-- https://mvnrepository.com/artifact/org.apache.jena/jena-arq -->
 		<dependency>
 			<groupId>org.apache.jena</groupId>
-			<artifactId>jena-core</artifactId>
-			<version>3.10.0</version>
+			<artifactId>jena-arq</artifactId>
+			<version>[3.10,4)</version>
 		</dependency>
+
+		<!-- Handling "Missing artifact com.github.jsonld-java.jsonld-java:jsonld-java:bundle:0.12.3" -->
+		<!-- https://mvnrepository.com/artifact/com.github.jsonld-java/jsonld-java -->
+		<dependency>
+			<groupId>com.github.jsonld-java</groupId>
+			<artifactId>jsonld-java</artifactId>
+			<version>[0.12.3,0.13)</version>
+		</dependency>
+
 	</dependencies>
 </project>
