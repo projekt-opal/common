@@ -9,7 +9,7 @@
 	<description>Common utilities for OPAL components</description>
 
 	<!-- For minor updates increment the 3rd level -->
-	<version>1.0.5</version>
+	<version>1.0.6</version>
 
 	<properties>
 		<!-- Common Java version: Java 8 -->
@@ -23,6 +23,14 @@
 
 	<dependencies>
 
+		<!-- Handling "Missing artifact com.github.jsonld-java.jsonld-java:jsonld-java:bundle:0.12.3" -->
+		<!-- https://mvnrepository.com/artifact/com.github.jsonld-java/jsonld-java -->
+		<dependency>
+			<groupId>com.github.jsonld-java</groupId>
+			<artifactId>jsonld-java</artifactId>
+			<version>0.12.3</version>
+		</dependency>
+
 		<!-- Jena ARQ -->
 		<!-- Includes jena-core -->
 		<!-- required e.g. for RDFDataMgr -->
@@ -31,14 +39,6 @@
 			<groupId>org.apache.jena</groupId>
 			<artifactId>jena-arq</artifactId>
 			<version>[3.10,4)</version>
-		</dependency>
-
-		<!-- Handling "Missing artifact com.github.jsonld-java.jsonld-java:jsonld-java:bundle:0.12.3" -->
-		<!-- https://mvnrepository.com/artifact/com.github.jsonld-java/jsonld-java -->
-		<dependency>
-			<groupId>com.github.jsonld-java</groupId>
-			<artifactId>jsonld-java</artifactId>
-			<version>[0.12.3,0.13)</version>
 		</dependency>
 
 	</dependencies>
