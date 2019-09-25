@@ -67,7 +67,7 @@ Edit the `pom.xml` of your project and insert the following code:
     <groupId>org.dice_research.opal</groupId>
     <artifactId>common</artifactId>
     <version>[1.0,1.1)</version>
-	</dependency>
+    </dependency>
 </dependencies>
 ```
 
