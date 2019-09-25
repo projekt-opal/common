@@ -6,11 +6,11 @@ Common utilities for OPAL components.
 
 To use OPAL Common, you have to configure the GitHub Maven Package Registry and add OPAL Common as a dependency.
 
-### 1. GitHub authentication token
+### 1. Create a GitHub authentication token
 
 For authentication, use the GitHub article [Creating a personal access token for the command line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). You need to set the read:packages scope. You can copy your new token directly after generation to continue with the next step.
 
-### 2. Configuration of Apache Maven
+### 2. Add the Maven repository
 
 Edit the file `~/.m2/settings.xml` and insert the code below.
 Replace _TOKEN_ with the data from the step above and replace also _USERNAME_ with your GitHub username.
@@ -55,18 +55,18 @@ This is additionally described in the GitHub article [Authenticating to GitHub P
 </settings>
 ```
 
-### 3. Specification of the dependency
+### 3. Add the Maven dependency
 
 Edit the `pom.xml` of your project and insert the following code:
 
 ```
 <dependencies>
-	<!-- OPAL common 1.0.* -->
-	<!-- https://github.com/projekt-opal/common -->
-	<dependency>
-		<groupId>org.dice_research.opal</groupId>
-		<artifactId>common</artifactId>
-		<version>[1.0,1.1)</version>
+  <!-- OPAL common 1.0.* -->
+  <!-- https://github.com/projekt-opal/common -->
+  <dependency>
+    <groupId>org.dice_research.opal</groupId>
+    <artifactId>common</artifactId>
+    <version>[1.0,1.1)</version>
 	</dependency>
 </dependencies>
 ```

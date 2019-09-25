@@ -9,7 +9,7 @@
 	<description>Common utilities for OPAL components</description>
 
 	<!-- For minor updates increment the 3rd level -->
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 
 	<properties>
 		<!-- Common Java version: Java 8 -->
