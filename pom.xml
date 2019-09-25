@@ -11,10 +11,16 @@
 	<!-- For minor updates increment the 3rd level -->
 	<version>1.0.4</version>
 
-	<!-- Common Java version: Java 8 -->
 	<properties>
+		<!-- Common Java version: Java 8 -->
 		<java.version>1.8</java.version>
+
+		<!-- Handling "Source option 5 is no longer supported. Use 6 or later." -->
+		<!-- https://github.com/jflex-de/jflex/issues/400 -->
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
+
 	<dependencies>
 
 		<!-- Jena ARQ -->
@@ -36,4 +42,12 @@
 		</dependency>
 
 	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>github-projekt-opal</id>
+			<name>GitHub projekt-opal Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/projekt-opal/common</url>
+		</repository>
+	</distributionManagement>
 </project>
