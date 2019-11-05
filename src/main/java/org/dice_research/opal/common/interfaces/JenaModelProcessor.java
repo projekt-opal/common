@@ -1,7 +1,5 @@
 package org.dice_research.opal.common.interfaces;
 
-import java.util.Collection;
-
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.vocabulary.DCAT;
 import org.dice_research.opal.common.utilities.ModelSerialization;
@@ -20,11 +18,11 @@ public interface JenaModelProcessor {
 	 * Reads data in given Jena {@link Model}, processes data related to DCAT
 	 * {@link DCAT#Dataset} URIs, and returns new Jena {@link Model}.
 	 * 
-	 * @param model       Jena model
-	 * @param datasetUris URIs of DCAT datasets to process
-	 * @return Jena model with processed data
+	 * @param model      Jena input model
+	 * @param datasetUri URI of DCAT dataset to process
+	 * @return Jena output model with processed data
 	 * @throws Exception On errors
 	 */
-	public Model process(Model model, Collection<String> datasetUris) throws Exception;
+	public Model process(Model model, String datasetUri) throws Exception;
 
 }
