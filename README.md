@@ -2,10 +2,32 @@
 
 Common utilities for OPAL components.
 
-## Installation with Apache Maven
+## Usage with Apache Maven
 
-Select a package at the [packages list](https://github.com/projekt-opal/common/packages) and download the **jar** and **pom** file at the assets section. Install the packages using the Apache Maven command `mvn install:install-file -Dfile=common-1.0.6.jar -DpomFile=common-1.0.6.pom`.
-(You can modify the version number.)
+Add the following lines to your `pom.xml` configuration file:
+
+```
+	<dependencies>
+		<dependency>
+			<groupId>org.dice-research.opal</groupId>
+			<artifactId>common</artifactId>
+			<version>[1,2)</version>
+		</dependency>
+	</dependencies>
+	
+	<repositories>
+		<repository>
+			<id>maven.aksw.internal</id>
+			<name>AKSW Repository</name>
+			<url>http://maven.aksw.org/archiva/repository/internal</url>
+		</repository>
+		<repository>
+			<id>maven.aksw.snapshots</id>
+			<name>AKSW Snapshot Repository</name>
+			<url>http://maven.aksw.org/archiva/repository/snapshots</url>
+		</repository>
+	</repositories>
+```
 
 ## Credits
 
