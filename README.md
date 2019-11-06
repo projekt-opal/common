@@ -6,7 +6,7 @@ Common utilities for OPAL components.
 
 Add the following lines to your `pom.xml` configuration file:
 
-```
+
 	<dependencies>
 		<dependency>
 			<groupId>org.dice-research.opal</groupId>
@@ -27,7 +27,7 @@ Add the following lines to your `pom.xml` configuration file:
 			<url>http://maven.aksw.org/archiva/repository/snapshots</url>
 		</repository>
 	</repositories>
-```
+
 
 ## Credits
 
