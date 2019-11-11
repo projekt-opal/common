@@ -2,6 +2,7 @@ package org.dice_research.opal.common.vocabulary;
 
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 
 /**
@@ -29,6 +30,12 @@ public abstract class Opal {
 	public static final Resource OPAL_CATALOG_GOVDATA = MODEL.createResource(NS_OPAL_CATALOGS + "govdata");
 	public static final Resource OPAL_CATALOG_EUROPEANDATAPORTAL = MODEL
 			.createResource(NS_OPAL_CATALOGS + "europeandataportal");
+
+	/**
+	 * Predicate used to backup URIs in source graphs, e.g. mCLOUD RDF crawled by
+	 * Squirrel. In OPAL, MD5 is used for DCAT:Dataset and DCAT:Distribution URIs.
+	 */
+	public static final Property originalUri = MODEL.createProperty(NS_OPAL, "originalUri");
 
 	// Final score (average value)
 
