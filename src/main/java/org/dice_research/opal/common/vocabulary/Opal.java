@@ -4,6 +4,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
+import org.dice_research.opal.common.constants.Catalogs;
 
 /**
  * OPAL metadata quality vocabulary.
@@ -18,18 +19,20 @@ public abstract class Opal {
 
 	public static final String NS_OPAL = "http://projekt-opal.de/";
 
-	private static final String NS_OPAL_CATALOGS = NS_OPAL + "catalog/";
-	private static final String NS_OPAL_DIMENSIONS = "http://dimension.projekt-opal.de/";
-	private static final String NS_OPAL_METRICS = "http://metric.projekt-opal.de/";
+	public static final String NS_OPAL_CATALOGS = NS_OPAL + "catalog/";
+	public static final String NS_OPAL_DATASETS = NS_OPAL + "dataset/";
+	public static final String NS_OPAL_DISTRIBUTIONS = NS_OPAL + "distribution/";
+	public static final String NS_OPAL_DIMENSIONS = "http://dimension.projekt-opal.de/";
+	public static final String NS_OPAL_METRICS = "http://metric.projekt-opal.de/";
 
 	private static final Model MODEL = ModelFactory.createDefaultModel();
 
 	// Fixed resource URIs
 
-	public static final Resource OPAL_CATALOG_MCLOUD = MODEL.createResource(NS_OPAL_CATALOGS + "mcloud");
-	public static final Resource OPAL_CATALOG_GOVDATA = MODEL.createResource(NS_OPAL_CATALOGS + "govdata");
+	public static final Resource OPAL_CATALOG_MCLOUD = MODEL.createResource(NS_OPAL_CATALOGS + Catalogs.ID_MCLOUD);
+	public static final Resource OPAL_CATALOG_GOVDATA = MODEL.createResource(NS_OPAL_CATALOGS + Catalogs.ID_GOVDATA);
 	public static final Resource OPAL_CATALOG_EUROPEANDATAPORTAL = MODEL
-			.createResource(NS_OPAL_CATALOGS + "europeandataportal");
+			.createResource(NS_OPAL_CATALOGS + Catalogs.ID_EUROPEANDATAPORTAL);
 
 	/**
 	 * Predicate used to backup URIs in source graphs, e.g. mCLOUD RDF crawled by

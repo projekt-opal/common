@@ -1,6 +1,7 @@
 package org.dice_research.opal.common;
 
 import org.dice_research.opal.common.utilities.Hash;
+import org.dice_research.opal.common.utilities.UriRewriter;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -17,13 +18,12 @@ public class HashTest {
 	public static final String JAVA_MD5 = "d52387880e1ea22817a72d3759213819";
 
 	/**
-	 * Tests computations of MD5 using the same {@link Hash} instance.
+	 * Tests computations of MD5 using the same {@link UriRewriter} instance.
 	 */
 	@Test
 	public void test() {
-		Hash hash = new Hash();
-		Assert.assertEquals("MD5 test 'hello world'", HELLO_WORLD_MD5, hash.md5(HELLO_WORLD));
-		Assert.assertEquals("Second MD5 test 'Java'", JAVA_MD5, hash.md5(JAVA));
+		Assert.assertEquals("MD5 test 'hello world'", HELLO_WORLD_MD5, Hash.md5(HELLO_WORLD));
+		Assert.assertEquals("Second MD5 test 'Java'", JAVA_MD5, Hash.md5(JAVA));
 	}
 
 }
