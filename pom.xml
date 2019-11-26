@@ -10,7 +10,7 @@
 
 	<!-- For minor updates increment the 3rd or 4th level -->
 	<!-- For snapshots (development versions) add '-SNAPSHOT' -->
-	<version>1.0.7.2-SNAPSHOT</version>
+	<version>1.0.7.2</version>
 
 	<properties>
 		<java.version>1.8</java.version>

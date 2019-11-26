@@ -24,10 +24,10 @@ public abstract class UriRewriter {
 	 * @return URI to be used in the OPAL graph.
 	 */
 	public static String getOpalDatasetUri(String catalogId, String originalUri) {
-		if (catalogId == null || catalogId.isBlank()) {
+		if (catalogId == null || catalogId.isEmpty()) {
 			throw new RuntimeException("No catalog ID given.");
 		}
-		if (originalUri == null || originalUri.isBlank()) {
+		if (originalUri == null || originalUri.isEmpty()) {
 			throw new RuntimeException("No original URI given.");
 		}
 		return Opal.NS_OPAL_DATASETS + Hash.md5(catalogId + originalUri);
@@ -41,10 +41,10 @@ public abstract class UriRewriter {
 	 * @return URI to be used in the OPAL graph.
 	 */
 	public static String getOpalDistributionUri(String catalogId, String originalUri) {
-		if (catalogId == null || catalogId.isBlank()) {
+		if (catalogId == null || catalogId.isEmpty()) {
 			throw new RuntimeException("No catalog ID given.");
 		}
-		if (originalUri == null || originalUri.isBlank()) {
+		if (originalUri == null || originalUri.isEmpty()) {
 			throw new RuntimeException("No original URI given.");
 		}
 		return Opal.NS_OPAL_DISTRIBUTIONS + Hash.md5(catalogId + originalUri);
