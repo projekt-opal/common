@@ -33,8 +33,6 @@ Add the following lines to your `pom.xml` configuration file:
 		</repository>
 	</repositories>
 
-Available versions are listed at [maven.aksw.org](https://maven.aksw.org/archiva/#advancedsearch~internal/org.dice-research.opal~common~~~~~30).
-
 
 ## Credits
 
