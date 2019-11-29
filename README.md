@@ -2,10 +2,10 @@
 
 Common utilities for OPAL components.
 
-- [constants](../blob/master/src/main/java/org/dice_research/opal/common/constants) for languages and data-portals
-- [interfaces](../blob/master/src/main/java/org/dice_research/opal/common/interfaces) for OPAL components
-- [utilities](../blob/master/src/main/java/org/dice_research/opal/common/utilities) for handling files and data
-- [vocabulary](../blob/master/src/main/java/org/dice_research/opal/common/vocabulary) for namespaces and uris (additionally, using [org.apache.jena.vocabulary](https://jena.apache.org/documentation/javadoc/jena/org/apache/jena/vocabulary/package-summary.html) is recommended)
+- [constants](../master/src/main/java/org/dice_research/opal/common/constants) for languages and data-portals
+- [interfaces](../master/src/main/java/org/dice_research/opal/common/interfaces) for OPAL components
+- [utilities](../master/src/main/java/org/dice_research/opal/common/utilities) for handling files and data
+- [vocabulary](../master/src/main/java/org/dice_research/opal/common/vocabulary) for namespaces and uris (additionally, using [org.apache.jena.vocabulary](https://jena.apache.org/documentation/javadoc/jena/org/apache/jena/vocabulary/package-summary.html) is recommended)
 
 
 ## Usage with Apache Maven
