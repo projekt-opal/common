@@ -1,5 +1,8 @@
 package org.dice_research.opal.common.utilities;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.OutputStream;
 
 import org.apache.jena.rdf.model.Model;
@@ -22,23 +25,29 @@ public abstract class FileHandler {
 	public static final Lang DEFAULT_LANGUAGE = Lang.TURTLE;
 
 	/**
-	 * Exports Jena model to output stream using the {@link #DEFAULT_LANGUAGE}.
+	 * Exports Jena model to a file using the {@link #DEFAULT_LANGUAGE}.
 	 * 
-	 * Use {@link java.io.FileOutputStream} to get the {@link OutputStream} of a
-	 * {@link java.io.File}.
+	 * @param file  File to write
+	 * @param model Graph to write
+	 * 
+	 * @throws FileNotFoundException If file could not be found
+	 */
+	public static void export(File file, Model model) throws FileNotFoundException {
+		export(new FileOutputStream(file), model);
+	}
+
+	/**
+	 * Exports Jena model to output stream using the {@link #DEFAULT_LANGUAGE}.
 	 * 
 	 * @param outputStream OutputStream
 	 * @param model        Graph to write
 	 */
 	public static void export(OutputStream outputStream, Model model) {
-		RDFDataMgr.write(outputStream, model, DEFAULT_LANGUAGE);
+		export(outputStream, model, DEFAULT_LANGUAGE);
 	}
 
 	/**
 	 * Exports Jena model to output stream using the specified language.
-	 * 
-	 * Use {@link java.io.FileOutputStream} to get the {@link OutputStream} of a
-	 * {@link java.io.File}.
 	 * 
 	 * @param outputStream OutputStream
 	 * @param model        Graph to write
@@ -49,14 +58,22 @@ public abstract class FileHandler {
 	}
 
 	/**
+	 * Imports Jena model from the specified file in the {@link #DEFAULT_LANGUAGE}.
+	 * 
+	 * @param file A file in the {@link #DEFAULT_LANGUAGE}
+	 * 
+	 * @return Jena model
+	 */
+	public static Model importModel(File file) {
+		return importModel(file.toURI().toString());
+	}
+
+	/**
 	 * Imports Jena model from the specified URI of a file and the
 	 * {@link #DEFAULT_LANGUAGE}.
 	 * 
-	 * Use {@link File#toURI()} to get the URI of a file.
-	 * 
-	 * @see RDFDataMgr#read(Model, String, Lang)
-	 * 
 	 * @param uri URI to read from (includes file: and a plain file name)
+	 * 
 	 * @return Jena model
 	 */
 	public static Model importModel(String uri) {
@@ -66,13 +83,12 @@ public abstract class FileHandler {
 	/**
 	 * Imports Jena model from the specified URI of a file and the related language.
 	 * 
-	 * Use {@link File#toURI()} to get the URI of a file.
-	 * 
-	 * @see RDFDataMgr#read(Model, String, Lang)
-	 * 
 	 * @param uri  URI to read from (includes file: and a plain file name)
 	 * @param lang Hint for the syntax
+	 * 
 	 * @return Jena model
+	 * 
+	 * @see RDFDataMgr#read(Model, String, Lang)
 	 */
 	public static Model importModel(String uri, Lang lang) {
 		return RDFDataMgr.loadModel(uri, lang);
