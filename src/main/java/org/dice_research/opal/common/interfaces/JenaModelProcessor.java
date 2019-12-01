@@ -16,7 +16,12 @@ public interface JenaModelProcessor {
 
 	/**
 	 * Reads data in given Jena {@link Model}, processes data related to DCAT
-	 * {@link DCAT#Dataset} URIs, and returns new Jena {@link Model}.
+	 * {@link DCAT#Dataset} URIs, and returns a Jena {@link Model} with processed
+	 * data.
+	 * 
+	 * Note: The model to return may be the same instance as the input model. Data
+	 * in the input model may be changed. To protect the input model, use (inter
+	 * alia) <code>ModelFactory.createDefaultModel().add(model)</code>.
 	 * 
 	 * @param model      Jena input model
 	 * @param datasetUri URI of DCAT dataset to process

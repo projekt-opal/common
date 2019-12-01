@@ -9,7 +9,9 @@ import java.net.URISyntaxException;
  * 
  * Language codes and URIs used in DCAT.
  * 
- * @see https://www.w3.org/TR/vocab-dcat/#Property:catalog_language
+ * @see https://www.w3.org/TR/vocab-dcat-2/#Property:resource_language
+ * @see https://www.w3.org/TR/2014/REC-vocab-dcat-20140116/#Property:catalog_language
+ * @see https://www.w3.org/TR/2014/REC-vocab-dcat-20140116/#Property:dataset_language
  * @see http://id.loc.gov/vocabulary/iso639-1.html
  * 
  * @author Adrian Wilke
