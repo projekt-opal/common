@@ -23,6 +23,7 @@ public abstract class Dcat {
 
 	public static final Resource DataService = m.createResource(DCAT.NS + "DataService");
 	public static final Resource Relationship = m.createResource(DCAT.NS + "Relationship");
+	public static final Resource Resource = m.createResource(DCAT.NS + "Resource");
 	public static final Resource Role = m.createResource(DCAT.NS + "Role");
 
 	public static final Property accessService = m.createProperty(DCAT.NS + "accessService");
