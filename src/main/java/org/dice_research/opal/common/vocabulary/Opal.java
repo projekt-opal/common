@@ -38,7 +38,18 @@ public abstract class Opal {
 	 * Predicate used to backup URIs in source graphs, e.g. mCLOUD RDF crawled by
 	 * Squirrel. In OPAL, MD5 is used for DCAT:Dataset and DCAT:Distribution URIs.
 	 */
-	public static final Property originalUri = MODEL.createProperty(NS_OPAL, "originalUri");
+	public static final Property PROP_ORIGINAL_URI = MODEL.createProperty(NS_OPAL, "originalUri");
+
+	/**
+	 * @deprecated Use PROP_ORIGINAL_URI. Will be removed in the future.
+	 */
+	@Deprecated
+	public static final Property originalUri = PROP_ORIGINAL_URI;
+
+	/**
+	 * Point of time an OPAL process (converting etc.) was started.
+	 */
+	public static final Property PROP_PROCESSING_TIME = MODEL.createProperty(NS_OPAL, "processingTime");
 
 	// Final score (average value)
 
@@ -77,6 +88,8 @@ public abstract class Opal {
 	// Accessibility - Rights
 
 	public static final Resource OPAL_DIMENSION_RIGHTS = MODEL.createResource(NS_OPAL_DIMENSIONS + "Rights");
+	public static final Resource OPAL_METRIC_LICENSE_AVAILABLE = MODEL
+			.createResource(NS_OPAL_METRICS + "LicenseAvailable");
 	public static final Resource OPAL_METRIC_KNOWN_LICENSE = MODEL.createResource(NS_OPAL_METRICS + "KnownLicense");
 	public static final Resource OPAL_METRIC_MACHINE_READABLE_LICENSE = MODEL
 			.createResource(NS_OPAL_METRICS + "MachineReadableLicense");
