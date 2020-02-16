@@ -4,6 +4,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.ResourceFactory;
 import org.dice_research.opal.common.constants.Catalogs;
 
 /**
@@ -22,10 +23,15 @@ public abstract class Opal {
 	public static final String NS_OPAL_CATALOGS = NS_OPAL + "catalog/";
 	public static final String NS_OPAL_DATASETS = NS_OPAL + "dataset/";
 	public static final String NS_OPAL_DISTRIBUTIONS = NS_OPAL + "distribution/";
+	public static final String NS_OPAL_FORMAT = NS_OPAL + "format/";
 	public static final String NS_OPAL_DIMENSIONS = "http://dimension.projekt-opal.de/";
 	public static final String NS_OPAL_METRICS = "http://metric.projekt-opal.de/";
 
 	private static final Model MODEL = ModelFactory.createDefaultModel();
+
+	// Types
+
+	public static final Resource OPAL_FORMAT = ResourceFactory.createResource(NS_OPAL + "Format");
 
 	// Fixed resource URIs
 
