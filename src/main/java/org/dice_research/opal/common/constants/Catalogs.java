@@ -22,4 +22,9 @@ public abstract class Catalogs {
 	 */
 	public static final String ID_EUROPEANDATAPORTAL = "europeandataportal";
 
+	/**
+	 * ID for https://service.mdm-portal.de/mdm-portal-application/
+	 */
+	public static final String ID_MDM = "mdm";
+
 }
