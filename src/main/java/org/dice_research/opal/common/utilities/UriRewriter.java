@@ -22,6 +22,7 @@ public abstract class UriRewriter {
 	 * @param catalogId   ID of source catalog. Use constants in {@link Catalogs}.
 	 * @param originalUri as provided by catalog (data portal)
 	 * @return URI to be used in the OPAL graph.
+	 * @throws Exception RuntimeException if an input is null or empty
 	 */
 	public static String getOpalDatasetUri(String catalogId, String originalUri) {
 		if (catalogId == null || catalogId.isEmpty()) {
@@ -39,6 +40,7 @@ public abstract class UriRewriter {
 	 * @param catalogId   ID of source catalog. Use constants in {@link Catalogs}.
 	 * @param originalUri as provided by catalog (data portal)
 	 * @return URI to be used in the OPAL graph.
+	 * @throws Exception RuntimeException if an input is null or empty
 	 */
 	public static String getOpalDistributionUri(String catalogId, String originalUri) {
 		if (catalogId == null || catalogId.isEmpty()) {
