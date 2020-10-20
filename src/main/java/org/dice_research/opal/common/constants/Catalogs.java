@@ -7,6 +7,8 @@ package org.dice_research.opal.common.constants;
  */
 public abstract class Catalogs {
 
+	// --- IDs ---
+
 	/**
 	 * ID for https://mcloud.de/
 	 */
@@ -26,5 +28,27 @@ public abstract class Catalogs {
 	 * ID for https://service.mdm-portal.de/mdm-portal-application/
 	 */
 	public static final String ID_MDM = "mdm";
+
+	// --- URIs ---
+
+	/**
+	 * URI of https://mcloud.de/
+	 */
+	public static final String URI_MCLOUD = "https://mcloud.de/";
+
+	/**
+	 * URI of https://www.govdata.de/
+	 */
+	public static final String URI_GOVDATA = "https://www.govdata.de/";
+
+	/**
+	 * URI of https://www.europeandataportal.eu/
+	 */
+	public static final String URI_EUROPEANDATAPORTAL = "https://www.europeandataportal.eu/";
+
+	/**
+	 * URI of https://service.mdm-portal.de/mdm-portal-application/
+	 */
+	public static final String URI_MDM = "https://service.mdm-portal.de/";
 
 }
