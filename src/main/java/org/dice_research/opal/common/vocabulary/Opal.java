@@ -32,6 +32,7 @@ public abstract class Opal {
 	// Types
 
 	public static final Resource OPAL_FORMAT = ResourceFactory.createResource(NS_OPAL + "Format");
+	public static final Resource OPAL_LOCATION = ResourceFactory.createResource(NS_OPAL + "Location");
 
 	// Fixed resource URIs
 
